@@ -1,0 +1,51 @@
+#include <stdio.h>
+
+int main(){
+	int X1, V1, X2, V2;
+	
+	printf(">>Progam Adu Loncatan Jangkrik<<\n");
+	printf("Input posisi X1: ");
+	scanf("%d", &X1);
+	printf("Input gerakan sebesar V1: ");
+	scanf("%d", &V1);
+	printf("Input posisi X2: ");
+	scanf("%d", &X2);
+	printf("Input gerakan sebesar V2: ");
+	scanf("%d", &V2);
+	printf("Apakah kedua jangkrik tersebut berada pada tempat yang sama?\n");
+	
+	if(X1>X2){
+		while(X1>X2){
+		X1+=V1;
+		X2+=V2;
+		}
+		if(X1==X2){
+			printf("Yes! Jangkrik berada di tempat yang sama.");
+		}
+		else{
+			printf("No! Jangrik berada di tempat yang berbeda.");
+		}
+	}
+	else if(X1==X2){
+		if(V1==V2){
+			printf("Yes! Jangkrik berada di tempat yang sama.");
+		}
+		else{
+			printf("No! Jangrik berada di tempat yang berbeda.");
+		}
+	}
+	else{
+		while(X1<X2){
+		X1+=V1;
+		X2+=V2;
+		}
+		if(X1==X2){
+			printf("Yes! Jangkrik berada di tempat yang sama.");
+		}
+		else{
+			printf("No! Jangrik berada di tempat yang berbeda.");
+		}
+	}
+	return(0);
+}
+	
