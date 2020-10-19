@@ -1,0 +1,32 @@
+//kotak melalui terowongan//
+
+#include <stdio.h>
+
+int main () {
+	int n, i, j, k;
+	j=0;
+	int length[n], wide[n], height[n], volume[n];
+
+	printf ("==Banyak kotak yang ingin diangkut==\n");
+	scanf ("%d",&n);
+	printf ("\n==Mencari Volume Kotak yang ingin diangkut==\n");
+	printf ("\n");
+	
+	for (i=0; i<n; i++) 
+	{
+		printf (" panjang  lebar  tinggi \n");
+		scanf ("%d %d %d", &length[i], &wide[i], &height[i]);
+
+		if (height[i] < 41) 
+		{
+			volume[j] = length[i] * wide[i] * height[i];
+			j=j+1;
+		}
+	}
+
+	for (k=0; k<j ; k++) 
+	{
+		printf ("\n %d", volume[k]);
+	}
+	return 0;
+}
